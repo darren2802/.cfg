@@ -136,6 +136,10 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# hack to fix the version issue of fzf in Debian buster not being 0.24 (currently 0.17)
+# https://github.com/junegunn/fzf.vim/issues/1150#issuecomment-718694488
+export PATH="$HOME/fzf:$PATH"
+
 
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
