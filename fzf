@@ -1,0 +1,9 @@
+# https://github.com/junegunn/fzf.vim/issues/1150#issuecomment-718694488
+
+#!/bin/bash
+
+if [[ "$1" == "--version" ]]; then
+    echo "0.24.0"
+else
+    /usr/bin/fzf "$@"
+fi
